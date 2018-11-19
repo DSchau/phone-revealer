@@ -1,0 +1,8 @@
+- name: google
+  image: images/badges/google-play.png
+  url: https://play.google.com/store/apps/details?id=com.skiily.www.phonereveal
+  order: 2
+- name: apple
+  image: images/badges/app-store.png
+  url: https://itunes.apple.com/us/app/phone-reveal/id1443040948?ls=1&mt=8
+  order: 1
