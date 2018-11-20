@@ -13,6 +13,8 @@ const Container = styled.main`
   justify-content: center;
   height: 100vh;
   width: 100%;
+
+  overflow-y: hidden;
 `
 const Layout = ({ children }) => (
   <StaticQuery
