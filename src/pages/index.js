@@ -15,7 +15,6 @@ const Title = styled.h1`
   font-family: sans-serif;
 
   position: relative;
-  z-index: 2;
 
   font-size: 44px;
   text-align: center;
@@ -23,10 +22,6 @@ const Title = styled.h1`
   @media only screen and (min-width: 768px) {
     font-size: 88px;
   }
-`
-
-const StyledBadges = styled(Badges)`
-  z-index: 2;
 `
 
 const ImageContainer = styled.div`
@@ -41,11 +36,11 @@ const ImageContainer = styled.div`
 
 const IndexPage = ({ data }) => (
   <Layout>
-    <Title>Phone Reveal</Title>
-    <StyledBadges />
     <ImageContainer>
       <Image fluid={data.hero.childImageSharp.fluid} />
     </ImageContainer>
+    <Title>Phone Reveal</Title>
+    <Badges />
   </Layout>
 )
 
