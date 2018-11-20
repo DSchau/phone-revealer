@@ -12,16 +12,19 @@ const Container = styled.div`
   }
 `
 
-const Badge = styled.div`
-  margin: 1rem 0.5rem;
-`
 
-const Link = styled.a`
+const Badge = styled.a`
+  display: block;
+  margin: 1rem 0.5rem;
   color: inherit;
   text-decoration: none;
+
+  :focus {
+    transform: scale(1.025);
+  }
 `
 
-Link.defaultProps = {
+Badge.defaultProps = {
   rel: 'noopener noreferrer',
   target: '_blank',
 }
@@ -50,11 +53,9 @@ export default function Badges({ className }) {
       `}
       render={data => (
         <Container className={className}>
-          {data.badges.edges.map(({ node }) => (
-            <Badge key={node.id}>
-              <Link href={node.url}>
-                <Image fixed={node.image.childImageSharp.fixed} />
-              </Link>
+          {data.badges.edges.map(({ node }, index) => (
+            <Badge key={node.id} href={node.url} tabIndex={index + 1}>
+              <Image fixed={node.image.childImageSharp.fixed} />
             </Badge>
           ))}
         </Container>

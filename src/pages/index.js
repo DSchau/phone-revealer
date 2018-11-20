@@ -32,6 +32,8 @@ const ImageContainer = styled.div`
   left: 0;
 
   user-select: none;
+  user-drag: none;
+  pointer-events: none;
 `
 
 const IndexPage = ({ data }) => (
