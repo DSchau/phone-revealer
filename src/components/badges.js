@@ -53,8 +53,8 @@ export default function Badges({ className }) {
       `}
       render={data => (
         <Container className={className}>
-          {data.badges.edges.map(({ node }, index) => (
-            <Badge key={node.id} href={node.url} tabIndex={index + 1}>
+          {data.badges.edges.map(({ node }) => (
+            <Badge key={node.id} href={node.url} tabIndex={0}>
               <Image fixed={node.image.childImageSharp.fixed} />
             </Badge>
           ))}

@@ -5,6 +5,7 @@ import styled, { injectGlobal } from 'react-emotion'
 
 import Badges from '../components/badges'
 import Layout from '../components/layout'
+import SEO from '../components/seo'
 
 const Title = styled.h1`
   margin: 0;
@@ -38,6 +39,7 @@ const ImageContainer = styled.div`
 
 const IndexPage = ({ data }) => (
   <Layout>
+    <SEO title="A reverse phone lookup for Android and iOS" />
     <ImageContainer>
       <Image fluid={data.hero.childImageSharp.fluid} />
     </ImageContainer>
